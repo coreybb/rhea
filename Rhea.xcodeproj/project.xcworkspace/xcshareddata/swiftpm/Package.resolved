@@ -1,0 +1,24 @@
+{
+  "originHash" : "797396d89d655af0c54ccbcdd895f9c77ba8401ca8ea02689405402675378ecd",
+  "pins" : [
+    {
+      "identity" : "lazybones",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/coreybb/lazybones",
+      "state" : {
+        "branch" : "main",
+        "revision" : "02c9e561abad06ec624eb07dd14c9d2bd1f9287d"
+      }
+    },
+    {
+      "identity" : "swift-syntax",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftlang/swift-syntax.git",
+      "state" : {
+        "revision" : "0687f71944021d616d34d922343dcef086855920",
+        "version" : "600.0.1"
+      }
+    }
+  ],
+  "version" : 3
+}

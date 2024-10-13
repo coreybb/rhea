@@ -6,8 +6,21 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		02B0307A2CBADDD5008398EE /* LazyBones in Frameworks */ = {isa = PBXBuildFile; productRef = 02B030792CBADDD5008398EE /* LazyBones */; };
+		02B030B12CBB5A31008398EE /* SwiftBasicFormat in Frameworks */ = {isa = PBXBuildFile; productRef = 02B030B02CBB5A31008398EE /* SwiftBasicFormat */; };
+		02B030B32CBB5A31008398EE /* SwiftDiagnostics in Frameworks */ = {isa = PBXBuildFile; productRef = 02B030B22CBB5A31008398EE /* SwiftDiagnostics */; };
+		02B030B52CBB5A31008398EE /* SwiftIDEUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 02B030B42CBB5A31008398EE /* SwiftIDEUtils */; };
+		02B030B72CBB5A31008398EE /* SwiftOperators in Frameworks */ = {isa = PBXBuildFile; productRef = 02B030B62CBB5A31008398EE /* SwiftOperators */; };
+		02B030B92CBB5A31008398EE /* SwiftParser in Frameworks */ = {isa = PBXBuildFile; productRef = 02B030B82CBB5A31008398EE /* SwiftParser */; };
+		02B030BB2CBB5A31008398EE /* SwiftParserDiagnostics in Frameworks */ = {isa = PBXBuildFile; productRef = 02B030BA2CBB5A31008398EE /* SwiftParserDiagnostics */; };
+		02B030BD2CBB5A31008398EE /* SwiftSyntax in Frameworks */ = {isa = PBXBuildFile; productRef = 02B030BC2CBB5A31008398EE /* SwiftSyntax */; };
+		02B030CC2CBC7FCA008398EE /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 02B030CB2CBC7FCA008398EE /* README.txt */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		02B0305A2CBADB0F008398EE /* Rhea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rhea.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		02B030CB2CBC7FCA008398EE /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,6 +49,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02B030B32CBB5A31008398EE /* SwiftDiagnostics in Frameworks */,
+				02B030BB2CBB5A31008398EE /* SwiftParserDiagnostics in Frameworks */,
+				02B030B92CBB5A31008398EE /* SwiftParser in Frameworks */,
+				02B030B52CBB5A31008398EE /* SwiftIDEUtils in Frameworks */,
+				02B030B12CBB5A31008398EE /* SwiftBasicFormat in Frameworks */,
+				02B0307A2CBADDD5008398EE /* LazyBones in Frameworks */,
+				02B030B72CBB5A31008398EE /* SwiftOperators in Frameworks */,
+				02B030BD2CBB5A31008398EE /* SwiftSyntax in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +66,7 @@
 		02B030512CBADB0F008398EE = {
 			isa = PBXGroup;
 			children = (
+				02B030CB2CBC7FCA008398EE /* README.txt */,
 				02B0305C2CBADB0F008398EE /* Rhea */,
 				02B0305B2CBADB0F008398EE /* Products */,
 			);
@@ -78,6 +100,14 @@
 			);
 			name = Rhea;
 			packageProductDependencies = (
+				02B030792CBADDD5008398EE /* LazyBones */,
+				02B030B02CBB5A31008398EE /* SwiftBasicFormat */,
+				02B030B22CBB5A31008398EE /* SwiftDiagnostics */,
+				02B030B42CBB5A31008398EE /* SwiftIDEUtils */,
+				02B030B62CBB5A31008398EE /* SwiftOperators */,
+				02B030B82CBB5A31008398EE /* SwiftParser */,
+				02B030BA2CBB5A31008398EE /* SwiftParserDiagnostics */,
+				02B030BC2CBB5A31008398EE /* SwiftSyntax */,
 			);
 			productName = Rhea;
 			productReference = 02B0305A2CBADB0F008398EE /* Rhea.app */;
@@ -107,6 +137,10 @@
 			);
 			mainGroup = 02B030512CBADB0F008398EE;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				02B030782CBADDD5008398EE /* XCRemoteSwiftPackageReference "lazybones" */,
+				02B030AF2CBB5A31008398EE /* XCRemoteSwiftPackageReference "swift-syntax" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 02B0305B2CBADB0F008398EE /* Products */;
 			projectDirPath = "";
@@ -122,6 +156,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02B030CC2CBC7FCA008398EE /* README.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,7 +186,6 @@
 				INFOPLIST_FILE = Rhea/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -180,7 +214,6 @@
 				INFOPLIST_FILE = Rhea/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -337,6 +370,68 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		02B030782CBADDD5008398EE /* XCRemoteSwiftPackageReference "lazybones" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/coreybb/lazybones";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		02B030AF2CBB5A31008398EE /* XCRemoteSwiftPackageReference "swift-syntax" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/swiftlang/swift-syntax.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 600.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		02B030792CBADDD5008398EE /* LazyBones */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02B030782CBADDD5008398EE /* XCRemoteSwiftPackageReference "lazybones" */;
+			productName = LazyBones;
+		};
+		02B030B02CBB5A31008398EE /* SwiftBasicFormat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02B030AF2CBB5A31008398EE /* XCRemoteSwiftPackageReference "swift-syntax" */;
+			productName = SwiftBasicFormat;
+		};
+		02B030B22CBB5A31008398EE /* SwiftDiagnostics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02B030AF2CBB5A31008398EE /* XCRemoteSwiftPackageReference "swift-syntax" */;
+			productName = SwiftDiagnostics;
+		};
+		02B030B42CBB5A31008398EE /* SwiftIDEUtils */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02B030AF2CBB5A31008398EE /* XCRemoteSwiftPackageReference "swift-syntax" */;
+			productName = SwiftIDEUtils;
+		};
+		02B030B62CBB5A31008398EE /* SwiftOperators */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02B030AF2CBB5A31008398EE /* XCRemoteSwiftPackageReference "swift-syntax" */;
+			productName = SwiftOperators;
+		};
+		02B030B82CBB5A31008398EE /* SwiftParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02B030AF2CBB5A31008398EE /* XCRemoteSwiftPackageReference "swift-syntax" */;
+			productName = SwiftParser;
+		};
+		02B030BA2CBB5A31008398EE /* SwiftParserDiagnostics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02B030AF2CBB5A31008398EE /* XCRemoteSwiftPackageReference "swift-syntax" */;
+			productName = SwiftParserDiagnostics;
+		};
+		02B030BC2CBB5A31008398EE /* SwiftSyntax */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02B030AF2CBB5A31008398EE /* XCRemoteSwiftPackageReference "swift-syntax" */;
+			productName = SwiftSyntax;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 02B030522CBADB0F008398EE /* Project object */;
 }
