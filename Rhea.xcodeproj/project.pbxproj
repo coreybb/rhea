@@ -15,12 +15,12 @@
 		02B030B92CBB5A31008398EE /* SwiftParser in Frameworks */ = {isa = PBXBuildFile; productRef = 02B030B82CBB5A31008398EE /* SwiftParser */; };
 		02B030BB2CBB5A31008398EE /* SwiftParserDiagnostics in Frameworks */ = {isa = PBXBuildFile; productRef = 02B030BA2CBB5A31008398EE /* SwiftParserDiagnostics */; };
 		02B030BD2CBB5A31008398EE /* SwiftSyntax in Frameworks */ = {isa = PBXBuildFile; productRef = 02B030BC2CBB5A31008398EE /* SwiftSyntax */; };
-		02B030CC2CBC7FCA008398EE /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 02B030CB2CBC7FCA008398EE /* README.txt */; };
+		02B030CC2CBC7FCA008398EE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 02B030CB2CBC7FCA008398EE /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		02B0305A2CBADB0F008398EE /* Rhea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rhea.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		02B030CB2CBC7FCA008398EE /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		02B030CB2CBC7FCA008398EE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -66,7 +66,7 @@
 		02B030512CBADB0F008398EE = {
 			isa = PBXGroup;
 			children = (
-				02B030CB2CBC7FCA008398EE /* README.txt */,
+				02B030CB2CBC7FCA008398EE /* README.md */,
 				02B0305C2CBADB0F008398EE /* Rhea */,
 				02B0305B2CBADB0F008398EE /* Products */,
 			);
@@ -156,7 +156,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02B030CC2CBC7FCA008398EE /* README.txt in Resources */,
+				02B030CC2CBC7FCA008398EE /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
