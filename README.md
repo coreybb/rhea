@@ -1,5 +1,5 @@
 # Rhea (Pre-Alpha)
-<img src="Sources/Media.xcassets/rhea-logo.imageset/rhea-logo.png" width="300" alt="Rhea Logo">
+<img src="Rhea/Assets.xcassets/logo.imageset/rhea-logo.png" width="300" alt="Rhea Logo">
 
 ## Overview
 
