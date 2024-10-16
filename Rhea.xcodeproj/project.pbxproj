@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		028D1EE32CBD966800BE316B /* UniformTypeIdentifiers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 028D1EE22CBD966800BE316B /* UniformTypeIdentifiers.framework */; };
+		028D1EFB2CBD966800BE316B /* RheaFileProviderUI.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 028D1EF12CBD966800BE316B /* RheaFileProviderUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		028D1EFE2CBD966800BE316B /* RheaFileProvider.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 028D1EE02CBD966800BE316B /* RheaFileProvider.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		02B0307A2CBADDD5008398EE /* LazyBones in Frameworks */ = {isa = PBXBuildFile; productRef = 02B030792CBADDD5008398EE /* LazyBones */; };
 		02B030B12CBB5A31008398EE /* SwiftBasicFormat in Frameworks */ = {isa = PBXBuildFile; productRef = 02B030B02CBB5A31008398EE /* SwiftBasicFormat */; };
 		02B030B32CBB5A31008398EE /* SwiftDiagnostics in Frameworks */ = {isa = PBXBuildFile; productRef = 02B030B22CBB5A31008398EE /* SwiftDiagnostics */; };
@@ -18,12 +21,61 @@
 		02B030CC2CBC7FCA008398EE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 02B030CB2CBC7FCA008398EE /* README.md */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		028D1EF92CBD966800BE316B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 02B030522CBADB0F008398EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 028D1EF02CBD966800BE316B;
+			remoteInfo = RheaFileProviderUI;
+		};
+		028D1EFC2CBD966800BE316B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 02B030522CBADB0F008398EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 028D1EDF2CBD966800BE316B;
+			remoteInfo = RheaFileProvider;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		028D1EFF2CBD966800BE316B /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				028D1EFB2CBD966800BE316B /* RheaFileProviderUI.appex in Embed Foundation Extensions */,
+				028D1EFE2CBD966800BE316B /* RheaFileProvider.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		028D1EE02CBD966800BE316B /* RheaFileProvider.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RheaFileProvider.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		028D1EE22CBD966800BE316B /* UniformTypeIdentifiers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UniformTypeIdentifiers.framework; path = System/Library/Frameworks/UniformTypeIdentifiers.framework; sourceTree = SDKROOT; };
+		028D1EF12CBD966800BE316B /* RheaFileProviderUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RheaFileProviderUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		02B0305A2CBADB0F008398EE /* Rhea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rhea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02B030CB2CBC7FCA008398EE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		028D1F052CBD966800BE316B /* Exceptions for "RheaFileProviderUI" folder in "RheaFileProviderUI" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 028D1EF02CBD966800BE316B /* RheaFileProviderUI */;
+		};
+		028D1F072CBD966800BE316B /* Exceptions for "RheaFileProvider" folder in "RheaFileProvider" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 028D1EDF2CBD966800BE316B /* RheaFileProvider */;
+		};
 		02B030702CBADB10008398EE /* Exceptions for "Rhea" folder in "Rhea" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -34,6 +86,22 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		028D1EE42CBD966800BE316B /* RheaFileProvider */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				028D1F072CBD966800BE316B /* Exceptions for "RheaFileProvider" folder in "RheaFileProvider" target */,
+			);
+			path = RheaFileProvider;
+			sourceTree = "<group>";
+		};
+		028D1EF22CBD966800BE316B /* RheaFileProviderUI */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				028D1F052CBD966800BE316B /* Exceptions for "RheaFileProviderUI" folder in "RheaFileProviderUI" target */,
+			);
+			path = RheaFileProviderUI;
+			sourceTree = "<group>";
+		};
 		02B0305C2CBADB0F008398EE /* Rhea */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -45,6 +113,21 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		028D1EDD2CBD966800BE316B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				028D1EE32CBD966800BE316B /* UniformTypeIdentifiers.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		028D1EEE2CBD966800BE316B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		02B030572CBADB0F008398EE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -63,11 +146,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		028D1EE12CBD966800BE316B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				028D1EE22CBD966800BE316B /* UniformTypeIdentifiers.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		02B030512CBADB0F008398EE = {
 			isa = PBXGroup;
 			children = (
 				02B030CB2CBC7FCA008398EE /* README.md */,
 				02B0305C2CBADB0F008398EE /* Rhea */,
+				028D1EE42CBD966800BE316B /* RheaFileProvider */,
+				028D1EF22CBD966800BE316B /* RheaFileProviderUI */,
+				028D1EE12CBD966800BE316B /* Frameworks */,
 				02B0305B2CBADB0F008398EE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,6 +170,8 @@
 			isa = PBXGroup;
 			children = (
 				02B0305A2CBADB0F008398EE /* Rhea.app */,
+				028D1EE02CBD966800BE316B /* RheaFileProvider.appex */,
+				028D1EF12CBD966800BE316B /* RheaFileProviderUI.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -83,6 +179,50 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		028D1EDF2CBD966800BE316B /* RheaFileProvider */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 028D1F062CBD966800BE316B /* Build configuration list for PBXNativeTarget "RheaFileProvider" */;
+			buildPhases = (
+				028D1EDC2CBD966800BE316B /* Sources */,
+				028D1EDD2CBD966800BE316B /* Frameworks */,
+				028D1EDE2CBD966800BE316B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				028D1EE42CBD966800BE316B /* RheaFileProvider */,
+			);
+			name = RheaFileProvider;
+			packageProductDependencies = (
+			);
+			productName = RheaFileProvider;
+			productReference = 028D1EE02CBD966800BE316B /* RheaFileProvider.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		028D1EF02CBD966800BE316B /* RheaFileProviderUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 028D1F042CBD966800BE316B /* Build configuration list for PBXNativeTarget "RheaFileProviderUI" */;
+			buildPhases = (
+				028D1EED2CBD966800BE316B /* Sources */,
+				028D1EEE2CBD966800BE316B /* Frameworks */,
+				028D1EEF2CBD966800BE316B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				028D1EF22CBD966800BE316B /* RheaFileProviderUI */,
+			);
+			name = RheaFileProviderUI;
+			packageProductDependencies = (
+			);
+			productName = RheaFileProviderUI;
+			productReference = 028D1EF12CBD966800BE316B /* RheaFileProviderUI.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		02B030592CBADB0F008398EE /* Rhea */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 02B030712CBADB10008398EE /* Build configuration list for PBXNativeTarget "Rhea" */;
@@ -90,10 +230,13 @@
 				02B030562CBADB0F008398EE /* Sources */,
 				02B030572CBADB0F008398EE /* Frameworks */,
 				02B030582CBADB0F008398EE /* Resources */,
+				028D1EFF2CBD966800BE316B /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				028D1EFA2CBD966800BE316B /* PBXTargetDependency */,
+				028D1EFD2CBD966800BE316B /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				02B0305C2CBADB0F008398EE /* Rhea */,
@@ -123,6 +266,12 @@
 				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
+					028D1EDF2CBD966800BE316B = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					028D1EF02CBD966800BE316B = {
+						CreatedOnToolsVersion = 16.0;
+					};
 					02B030592CBADB0F008398EE = {
 						CreatedOnToolsVersion = 16.0;
 					};
@@ -140,6 +289,7 @@
 			packageReferences = (
 				02B030782CBADDD5008398EE /* XCRemoteSwiftPackageReference "lazybones" */,
 				02B030AF2CBB5A31008398EE /* XCRemoteSwiftPackageReference "swift-syntax" */,
+				028D1F0A2CBDA42E00BE316B /* XCRemoteSwiftPackageReference "witch-hat" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 02B0305B2CBADB0F008398EE /* Products */;
@@ -147,11 +297,27 @@
 			projectRoot = "";
 			targets = (
 				02B030592CBADB0F008398EE /* Rhea */,
+				028D1EDF2CBD966800BE316B /* RheaFileProvider */,
+				028D1EF02CBD966800BE316B /* RheaFileProviderUI */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		028D1EDE2CBD966800BE316B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		028D1EEF2CBD966800BE316B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		02B030582CBADB0F008398EE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -163,6 +329,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		028D1EDC2CBD966800BE316B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		028D1EED2CBD966800BE316B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		02B030562CBADB0F008398EE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -172,7 +352,122 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		028D1EFA2CBD966800BE316B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 028D1EF02CBD966800BE316B /* RheaFileProviderUI */;
+			targetProxy = 028D1EF92CBD966800BE316B /* PBXContainerItemProxy */;
+		};
+		028D1EFD2CBD966800BE316B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 028D1EDF2CBD966800BE316B /* RheaFileProvider */;
+			targetProxy = 028D1EFC2CBD966800BE316B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		028D1F002CBD966800BE316B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = RheaFileProvider/RheaFileProvider.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QLP74BV84M;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RheaFileProvider/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = RheaFileProvider;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lakonic.dev.Rhea.RheaFileProvider;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		028D1F012CBD966800BE316B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = RheaFileProvider/RheaFileProvider.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QLP74BV84M;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RheaFileProvider/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = RheaFileProvider;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lakonic.dev.Rhea.RheaFileProvider;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		028D1F022CBD966800BE316B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QLP74BV84M;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RheaFileProviderUI/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = RheaFileProviderUI;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lakonic.dev.Rhea.RheaFileProviderUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		028D1F032CBD966800BE316B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QLP74BV84M;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RheaFileProviderUI/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = RheaFileProviderUI;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lakonic.dev.Rhea.RheaFileProviderUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		02B030722CBADB10008398EE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -193,7 +488,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = lakonic.Rhea;
+				PRODUCT_BUNDLE_IDENTIFIER = lakonic.dev.Rhea;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -221,7 +516,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = lakonic.Rhea;
+				PRODUCT_BUNDLE_IDENTIFIER = lakonic.dev.Rhea;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -351,6 +646,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		028D1F042CBD966800BE316B /* Build configuration list for PBXNativeTarget "RheaFileProviderUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				028D1F022CBD966800BE316B /* Debug */,
+				028D1F032CBD966800BE316B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		028D1F062CBD966800BE316B /* Build configuration list for PBXNativeTarget "RheaFileProvider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				028D1F002CBD966800BE316B /* Debug */,
+				028D1F012CBD966800BE316B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		02B030552CBADB0F008398EE /* Build configuration list for PBXProject "Rhea" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -372,6 +685,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		028D1F0A2CBDA42E00BE316B /* XCRemoteSwiftPackageReference "witch-hat" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/coreybb/witch-hat/";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		02B030782CBADDD5008398EE /* XCRemoteSwiftPackageReference "lazybones" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/coreybb/lazybones";

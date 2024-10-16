@@ -54,7 +54,6 @@ final class FileDirectoryTableCell: UITableViewCell {
         super.prepareForReuse()
         contentView.alpha = 1
         isExpanding = false
-        // ... reset other properties as needed
     }
     
     
@@ -88,7 +87,7 @@ final class FileDirectoryTableCell: UITableViewCell {
     //  MARK: - Private API
     private func setupCell() {
         backgroundColor = .clear
-        selectionStyle = .gray
+        selectionStyle = .none
         contentView.addInteraction(UIContextMenuInteraction(delegate: self))
     }
     

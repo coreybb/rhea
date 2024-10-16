@@ -33,6 +33,8 @@ class SyntaxHighlighter: SyntaxVisitor {
             attributes[.foregroundColor] = UIColor.lightGray
         }
         
+        attributes[.font] = UIFont.systemFont(ofSize: 16, weight: .regular)
+        
         if range.location + range.length <= attributedString.length {
             attributedString.addAttributes(attributes, range: range)
         }

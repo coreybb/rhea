@@ -11,8 +11,10 @@ final class TextEditorView: LazyView {
     
     init() {
         super.init(color: UIColor(white: 0.15, alpha: 1))
-        let padding: CGFloat = 16
+        let lateralPadding: CGFloat = 16
+        let topPadding: CGFloat = 8
+        let bottomPadding: CGFloat = 0
         addSubview(textView)
-        textView.fillSuperview(padding: UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding))
+        textView.fillSuperview(padding: UIEdgeInsets(top: topPadding, left: lateralPadding, bottom: bottomPadding, right: lateralPadding))
     }
 }

@@ -6,9 +6,13 @@ final class FileSystemDataSource: UITableViewDiffableDataSource<FileSystemDataSo
         case main
     }
 
-    var fileSystem: [FileDirectoryEntry] = []
     var expandedDirectories: [String: Bool] = [:]
     weak var tableView: UITableView!
+    var rootDirectory: Directory? {
+        didSet {
+            fileSystem = rootDirectory.map { [$0] } ?? []
+        }
+    }
     
     
     //  MARK: - Init
@@ -22,25 +26,35 @@ final class FileSystemDataSource: UITableViewDiffableDataSource<FileSystemDataSo
             return cell
         }
     }
-    
+    var fileSystem: [FileDirectoryEntry] = [] {
+        didSet {
+            flattenedItems = flatten(fileSystem)
+        }
+    }
+    private var flattenedItems: [FileSystemItem] = []
     
     //  MARK: - Internal API
+    
     
     func applyInitialSnapshot() {
         var snapshot = NSDiffableDataSourceSnapshot<Section, FileSystemItem>()
         snapshot.appendSections([.main])
-        let items = flattenedFileSystem().map { FileSystemItem(entry: $0.entry, indentationLevel: $0.level, path: $0.path) }
-        snapshot.appendItems(items, toSection: .main)
-        apply(snapshot, animatingDifferences: false)
+        snapshot.appendItems(flattenedItems, toSection: .main)
+        print("Applying snapshot with \(flattenedItems.count) items")
+        apply(snapshot, animatingDifferences: true)
     }
-
-
+    
+    
     func toggleDirectory(at indexPath: IndexPath) {
         guard let item = itemIdentifier(for: indexPath),
               item.entry.type == .folder,
               let directory = item.entry as? Directory else {
+            print("Failed to toggle directory at indexPath: \(indexPath)")
             return
         }
+
+        print("Toggling directory: \(item.path)")
+        print("Directory contents: \(directory.entries.map { $0.name })")
 
         performToggle(for: item, directory: directory)
     }
@@ -118,6 +132,64 @@ final class FileSystemDataSource: UITableViewDiffableDataSource<FileSystemDataSo
         snapshot.deleteItems(itemsToRemove)
         apply(snapshot, animatingDifferences: true)
     }
+    
+//    private func flatten(_ directory: Directory?, parentPath: String = "", level: Int = 0) -> [FileSystemItem] {
+//        guard let directory = directory else { return [] }
+//        
+//        var items: [FileSystemItem] = []
+//        let currentPath = parentPath.isEmpty ? directory.name : "\(parentPath)/\(directory.name)"
+//        items.append(FileSystemItem(entry: directory, indentationLevel: level, path: currentPath))
+//        
+//        for entry in directory.entries {
+//            if let subDirectory = entry as? Directory {
+//                items += flatten(subDirectory, parentPath: currentPath, level: level + 1)
+//            } else {
+//                let filePath = "\(currentPath)/\(entry.name)"
+//                items.append(FileSystemItem(entry: entry, indentationLevel: level + 1, path: filePath))
+//            }
+//        }
+//        
+//        return items
+//    }
+    
+    private func flatten(_ directory: Directory?, parentPath: String = "", level: Int = 0) -> [FileSystemItem] {
+        guard let directory = directory else { return [] }
+        
+        var items: [FileSystemItem] = []
+        let currentPath = parentPath.isEmpty ? directory.name : "\(parentPath)/\(directory.name)"
+        let item = FileSystemItem(entry: directory, indentationLevel: level, path: currentPath)
+        items.append(item)
+        
+        if expandedDirectories[currentPath] == true {
+            for entry in directory.entries {
+                if let subDirectory = entry as? Directory {
+                    items += flatten(subDirectory, parentPath: currentPath, level: level + 1)
+                } else {
+                    let filePath = "\(currentPath)/\(entry.name)"
+                    items.append(FileSystemItem(entry: entry, indentationLevel: level + 1, path: filePath))
+                }
+            }
+        }
+        
+        return items
+    }
+    
+    
+    private func flatten(_ entries: [FileDirectoryEntry], parentPath: String = "", level: Int = 0) -> [FileSystemItem] {
+        var items: [FileSystemItem] = []
+        
+        for entry in entries {
+            let currentPath = parentPath.isEmpty ? entry.name : "\(parentPath)/\(entry.name)"
+            items.append(FileSystemItem(entry: entry, indentationLevel: level, path: currentPath))
+            
+            if let directory = entry as? Directory {
+                items += flatten(directory.entries, parentPath: currentPath, level: level + 1)
+            }
+        }
+        
+        return items
+    }
+
     
 
     private func flattenedFileSystem() -> [(entry: FileDirectoryEntry, level: Int, path: String)] {

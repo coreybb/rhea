@@ -3,7 +3,7 @@
 
 ## Overview
 
-Rhea is an overly ambitious iOS- and iPadOS-native code editor, currently in its very early stages of development. Our goal is to bring a worthy editor and lightweight development environment to your iPad and iPhone. Leveraging remote processing, we overcome platform limitations to deliver a productive coding experience.
+Rhea is an overly ambitious iOS- and iPadOS-native code editor, currently in its very early stages of development. Our goal is to bring a worthy editor and lightweight development environment to your iPad and iPhone. We leverage remote processing to overcome platform limitations in delivering a productive coding experience.
 
 ⚠️ **Please Note**: Rhea is currently in a pre-alpha state. Many features are not yet implemented or fully functional. Use at your own risk and expect frequent changes and potential instability.
 
